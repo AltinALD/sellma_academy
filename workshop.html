@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rezervo vendin tënd për workshopin e Sellma Academy në Prishtinë, 9 nëntor 2026. Vendet janë të kufizuara." />
+  <title>Rezervo vendin · Sellma Academy · Prishtinë 9 Nëntor 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="workshop.css?v=2" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%230c0b0a' width='32' height='32'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='16' fill='%23c6a15b' font-family='Georgia'%3ES%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#top">
+      <span class="brand__mark">S</span>
+      <span>
+        <strong>Sellma Academy</strong>
+        <em data-i18n="brand.sub">Workshop · Prishtinë</em>
+      </span>
+    </a>
+    <div class="top__side">
+      <p class="limited" data-i18n="limited">Vende të kufizuara</p>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" class="lang__btn is-active" data-lang="sq" aria-pressed="true">SQ</button>
+        <button type="button" class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__frame">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="Prishtine%20-%209%20NENTOR%202026%2B38348878780.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__caption">
+          <p class="kicker" data-i18n="kicker">Workshop i radhës</p>
+          <p class="date-row">
+            <span>09</span>
+            <span data-i18n="month">Nëntor</span>
+            <span>2026</span>
+          </p>
+          <h1 data-i18n="title">Rezervo vendin tënd</h1>
+          <p class="lead" data-i18n="lead">Workshop profesional i grimit me Sellma Kasumoviq. Prishtinë, e hënë 9 nëntor 2026. Grup i vogël — vendet janë të kufizuara.</p>
+          <a class="btn btn--pulse hero__cta" href="#register" data-i18n="form.submit">Rezervo vendin tënd</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="register" id="register">
+      <div class="card">
+        <div class="card__head">
+          <p class="limited limited--card" data-i18n="limited">Vende të kufizuara</p>
+          <h2 data-i18n="form.title">Regjistrohu</h2>
+          <p data-i18n="form.lead">Shkruaj emrin dhe numrin. Të konfirmojmë vendin në WhatsApp.</p>
+        </div>
+
+        <form id="bookForm" novalidate>
+          <label class="hp" aria-hidden="true">
+            Website
+            <input type="text" name="website" tabindex="-1" autocomplete="off" />
+          </label>
+          <label>
+            <span data-i18n="form.name">Emri</span>
+            <input type="text" name="name" required autocomplete="name" maxlength="80" />
+          </label>
+          <label>
+            <span data-i18n="form.phone">Telefoni (WhatsApp)</span>
+            <input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+383 …" maxlength="30" />
+          </label>
+          <label>
+            <span data-i18n="form.city">Qyteti</span>
+            <input type="text" name="city" autocomplete="address-level2" maxlength="60" data-i18n-placeholder="form.cityPh" placeholder="Prishtinë" />
+          </label>
+          <label>
+            <span data-i18n="form.ig">Instagram</span>
+            <input type="text" name="instagram" maxlength="40" placeholder="@emri" autocomplete="off" />
+          </label>
+          <fieldset>
+            <legend data-i18n="form.level">Niveli</legend>
+            <div class="choices">
+              <label class="choice">
+                <input type="radio" name="level" value="beginner" checked />
+                <span data-i18n="form.beginner">Fillestare</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="level" value="pro" />
+                <span data-i18n="form.pro">Jam duke punuar</span>
+              </label>
+            </div>
+          </fieldset>
+          <p class="form-error" id="formError" hidden></p>
+          <button type="submit" class="btn btn--pulse" data-i18n="form.submit">Rezervo vendin tënd</button>
+          <p class="fine" data-i18n="form.fine">Vendi ruhet pasi të konfirmohet në WhatsApp. Pa pagesë në këtë faqe.</p>
+        </form>
+
+        <div class="success" id="success" hidden>
+          <p class="success__mark" aria-hidden="true">✓</p>
+          <h2 data-i18n="ok.title">Kërkesa u dërgua</h2>
+          <p data-i18n="ok.lead">Faleminderit. Hap WhatsApp që akademia ta marrë kërkesën. Vendi konfirmohet kur të të kthehemi.</p>
+          <a class="btn" id="waLink" href="https://wa.me/38348878780" target="_blank" rel="noopener noreferrer" data-i18n="ok.wa">Hap WhatsApp</a>
+          <button type="button" class="text-btn" id="again" data-i18n="ok.again">Regjistro dikë tjetër</button>
+        </div>
+
+        <div class="card__contact">
+          <a href="https://wa.me/38348878780" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="viber://chat?number=%2B38348878780">Viber</a>
+          <a href="tel:+38348878780">+383 48 878 780</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="facts" aria-label="Details">
+      <article>
+        <p data-i18n="fact1.k">Data</p>
+        <h3 data-i18n="fact1.h">9 Nëntor 2026</h3>
+        <p data-i18n="fact1.v">E hënë · Prishtinë</p>
+      </article>
+      <article>
+        <p data-i18n="fact2.k">Çfarë merr</p>
+        <h3 data-i18n="fact2.h">Certifikatë</h3>
+        <p data-i18n="fact2.v">Mësim praktik për fillestare dhe për ata që punojnë.</p>
+      </article>
+      <article>
+        <p data-i18n="fact3.k">Akademia</p>
+        <h3>6000+</h3>
+        <p data-i18n="fact3.v">Studentë të certifikuar në botë.</p>
+      </article>
+    </section>
+
+    <section class="steps">
+      <h2 data-i18n="steps.title">Si rezervohet</h2>
+      <ol>
+        <li>
+          <span>01</span>
+          <p data-i18n="steps.1">Shkruaj emrin dhe numrin e WhatsApp.</p>
+        </li>
+        <li>
+          <span>02</span>
+          <p data-i18n="steps.2">Shtyp «Rezervo vendin tënd».</p>
+        </li>
+        <li>
+          <span>03</span>
+          <p data-i18n="steps.3">Të konfirmojmë vendin në WhatsApp. Hapësira është e kufizuar.</p>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Sellma Academy · Sellma Kasumoviq</p>
+    <p>
+      <a href="https://www.instagram.com/sellma.academy/" target="_blank" rel="noopener noreferrer">@sellma.academy</a>
+      ·
+      <a href="mailto:academy@sellmakasumoviq.com">academy@sellmakasumoviq.com</a>
+    </p>
+  </footer>
+
+  <a class="dock btn--pulse" href="#register" data-i18n="form.submit">Rezervo vendin tënd</a>
+
+  <script src="workshop.js?v=3"></script>
+</body>
+</html>

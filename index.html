@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anife Memeti — Make-up Artist Zürich. Zertifiziert bei Sellma Academy. Soft Glam, Events & Beauty." />
+  <title>Anife Memeti · AM Studio Zürich</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/logo-gold.png" type="image/png" />
+</head>
+<body class="is-loading">
+  <div class="loader" id="pageLoader" aria-live="polite" aria-busy="true">
+    <div class="loader__backdrop" aria-hidden="true">
+      <span class="loader__orb loader__orb--1"></span>
+      <span class="loader__orb loader__orb--2"></span>
+    </div>
+    <canvas class="loader__particles" id="loaderParticles" aria-hidden="true"></canvas>
+    <div class="loader__content">
+      <div class="loader__stage" id="loaderStage">
+        <svg class="loader__ring" viewBox="0 0 220 220" aria-hidden="true">
+          <defs>
+            <linearGradient id="loaderGoldStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#E8D5A3"/>
+              <stop offset="50%" stop-color="#C9A962"/>
+              <stop offset="100%" stop-color="#8F6F2E"/>
+            </linearGradient>
+          </defs>
+          <circle class="loader__ring-track" cx="110" cy="110" r="98" />
+          <circle class="loader__ring-progress" id="loaderProgress" cx="110" cy="110" r="98" />
+        </svg>
+        <div class="loader__orbit" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="loader__glow" id="loaderGlow" aria-hidden="true"></div>
+        <div class="loader__logo-wrap">
+          <img src="images/logo-gold.png" alt="Anife Memeti" class="loader__logo" id="loaderLogo" />
+          <span class="loader__shimmer" aria-hidden="true"></span>
+        </div>
+      </div>
+      <p class="loader__percent" id="loaderPercent" aria-live="polite">0%</p>
+      <span class="loader__line" aria-hidden="true"></span>
+      <p class="loader__hint" data-i18n="loader.hint">Zürich · Schweiz</p>
+      <button type="button" class="loader__enter" id="loaderEnter" hidden data-i18n="loader.enter">Enter Studio</button>
+    </div>
+  </div>
+
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Anife Memeti">
+      <img src="images/logo-dark.png" alt="Anife Memeti" class="brand__logo" />
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <a href="#about" data-i18n="nav.about">Über mich</a>
+      <a href="#shop" data-i18n="nav.shop">Shop</a>
+      <a href="#work" data-i18n="nav.work">Arbeit</a>
+      <a href="#clients" data-i18n="nav.clients">Kunden</a>
+      <a href="#giveaway" data-i18n="nav.giveaway">Gewinnspiel</a>
+      <a href="#location" data-i18n="nav.location">Standort</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn is-active" data-lang="de" aria-pressed="true">DE</button>
+        <button type="button" class="lang-btn" data-lang="sq" aria-pressed="false">SQ</button>
+      </div>
+      <a class="ig-btn" href="https://www.instagram.com/anifememeti/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @anifememeti">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <button type="button" class="btn btn--sm btn--gold open-reserve" data-i18n="nav.reserve">Reservieren</button>
+      <button type="button" class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" hidden>
+    <a href="#about" data-i18n="nav.about">Über mich</a>
+    <a href="#shop" data-i18n="nav.shop">Shop</a>
+    <a href="#work" data-i18n="nav.work">Arbeit</a>
+    <a href="#clients" data-i18n="nav.clients">Kunden</a>
+    <a href="#giveaway" data-i18n="nav.giveaway">Gewinnspiel</a>
+    <a href="#location" data-i18n="nav.location">Standort</a>
+  </div>
+
+  <main>
+    <h1 class="sr-only">Anife Memeti · Make-up Artist Zürich</h1>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__media">
+        <video class="hero__video" autoplay muted loop playsinline poster="images/happy%20client1.png">
+          <source src="v1.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__veil"></div>
+      </div>
+      <div class="hero__content">
+        <div class="hero__logo-wrap">
+          <img src="images/logo-white.png" alt="Anife Memeti" class="hero__logo" />
+        </div>
+        <p class="eyebrow" data-i18n="hero.eyebrow">Make-up Artist · Zürich</p>
+        <p class="hero__lead" data-i18n="hero.lead">Eleganz, Präzision und Soft Glam — zertifiziert von Sellma Academy.</p>
+        <div class="hero__cta">
+          <button type="button" class="btn btn--gold btn--lg btn--pulse open-reserve" data-i18n="hero.cta">Termin reservieren</button>
+          <a href="#about" class="btn btn--ghost btn--lg" data-i18n="hero.secondary">Mehr erfahren</a>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-hidden="true"><span></span></a>
+    </section>
+
+    <!-- ABOUT + CERTIFICATION -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__copy reveal">
+            <p class="eyebrow" data-i18n="about.eyebrow">Über mich</p>
+            <h2 class="section-title" data-i18n="about.title">Zertifizierte Kunst der Schönheit</h2>
+            <p class="body" data-i18n="about.p1">Ich bin Anife Memeti, Make-up Artist aus Zürich. Mit Leidenschaft für natürliche Ausstrahlung und modernes Soft Glam gestalte ich Looks für Events, Shootings und besondere Momente.</p>
+            <p class="body" data-i18n="about.p2">Meine Ausbildung habe ich bei <strong>Sellma Kasumoviq</strong> an der <strong>Sellma Academy</strong> absolviert — mit Fokus auf Technik, Hautpflege und zeitlose Eleganz.</p>
+            <ul class="about__badges">
+              <li data-i18n="about.badge1">Sellma Academy Certified</li>
+              <li data-i18n="about.badge2">CH Zürich</li>
+              <li data-i18n="about.badge3">Events & Soft Glam</li>
+            </ul>
+          </div>
+          <div class="carousel about__certs reveal" data-carousel>
+            <div class="carousel__viewport">
+              <div class="carousel__track">
+                <figure class="cert-card carousel__slide">
+                  <img src="images/sellma1.png" alt="Anife Memeti at Sellma Academy" loading="lazy" />
+                  <figcaption data-i18n="about.cap1">Sellma Academy</figcaption>
+                </figure>
+                <figure class="cert-card cert-card--offset carousel__slide">
+                  <img src="images/sellma2.png" alt="Anife Memeti certification portrait" loading="lazy" />
+                  <figcaption data-i18n="about.cap2">Zertifiziert</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="carousel__controls">
+              <button type="button" class="carousel__btn" data-carousel-prev aria-label="Previous">‹</button>
+              <div class="carousel__dots" data-carousel-dots></div>
+              <button type="button" class="carousel__btn" data-carousel-next aria-label="Next">›</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section class="section shop" id="shop">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="shop.eyebrow">Beauty Shop</p>
+          <h2 class="section-title" data-i18n="shop.title">Ausgewählte Produkte</h2>
+          <p class="section-lead" data-i18n="shop.lead">Kuratierte Favoriten für den Alltag — Preise in CHF.</p>
+        </header>
+        <div class="product-grid">
+          <article class="product reveal" data-product="1">
+            <div class="product__media">
+              <img src="images/L1.png" alt="Soft Glow Serum" loading="lazy" />
+            </div>
+            <div class="product__body">
+              <h3 data-i18n="shop.p1.name">Soft Glow Serum</h3>
+              <p data-i18n="shop.p1.desc">Leichtes Glow-Serum für strahlende Haut.</p>
+              <div class="product__row">
+                <span class="price">CHF 48.–</span>
+                <button type="button" class="btn btn--sm btn--outline add-cart" data-i18n="shop.add">In den Warenkorb</button>
+              </div>
+            </div>
+          </article>
+          <article class="product reveal" data-product="2">
+            <div class="product__media">
+              <img src="images/l2.jpg" alt="Velvet Lip Tint" loading="lazy" />
+            </div>
+            <div class="product__body">
+              <h3 data-i18n="shop.p2.name">Velvet Lip Tint</h3>
+              <p data-i18n="shop.p2.desc">Samtiger Nude-Ton für Soft Glam Looks.</p>
+              <div class="product__row">
+                <span class="price">CHF 32.–</span>
+                <button type="button" class="btn btn--sm btn--outline add-cart" data-i18n="shop.add">In den Warenkorb</button>
+              </div>
+            </div>
+          </article>
+          <article class="product reveal" data-product="3">
+            <div class="product__media">
+              <img src="images/l3.jpeg" alt="Champagne Highlighter" loading="lazy" />
+            </div>
+            <div class="product__body">
+              <h3 data-i18n="shop.p3.name">Champagne Highlighter</h3>
+              <p data-i18n="shop.p3.desc">Feiner Champagner-Schimmer für Wangen & Dekolleté.</p>
+              <div class="product__row">
+                <span class="price">CHF 39.–</span>
+                <button type="button" class="btn btn--sm btn--outline add-cart" data-i18n="shop.add">In den Warenkorb</button>
+              </div>
+            </div>
+          </article>
+          <article class="product reveal" data-product="4">
+            <div class="product__media">
+              <img src="images/l4.jpg" alt="Lash Lift Kit Mini" loading="lazy" />
+            </div>
+            <div class="product__body">
+              <h3 data-i18n="shop.p4.name">Lash Lift Kit Mini</h3>
+              <p data-i18n="shop.p4.desc">Zuhause-Set für offene, natürliche Wimpern.</p>
+              <div class="product__row">
+                <span class="price">CHF 56.–</span>
+                <button type="button" class="btn btn--sm btn--outline add-cart" data-i18n="shop.add">In den Warenkorb</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DURING WORK -->
+    <section class="section work" id="work">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="work.eyebrow">Behind the Look</p>
+          <h2 class="section-title" data-i18n="work.title">Während der Arbeit</h2>
+          <p class="section-lead" data-i18n="work.lead">Einblicke in Sessions, Events und Studio-Momente.</p>
+        </header>
+        <div class="work-gallery reveal">
+          <figure class="work-shot work-shot--wide">
+            <img src="images/during%20wortk.png" alt="Makeup application during work" loading="lazy" />
+          </figure>
+          <figure class="work-shot">
+            <img src="images/during%20wotk.png" alt="Studio work session" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- HAPPY CLIENTS -->
+    <section class="section clients" id="clients">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="clients.eyebrow">Ergebnisse</p>
+          <h2 class="section-title" data-i18n="clients.title">Zufriedene Kundinnen</h2>
+          <p class="section-lead" data-i18n="clients.lead">Looks, die strahlen — und bleiben.</p>
+        </header>
+        <div class="carousel client-carousel reveal" data-carousel>
+          <div class="carousel__viewport">
+            <div class="carousel__track client-grid">
+              <figure class="client-card carousel__slide">
+                <img src="images/happy%20client1.png" alt="Happy client portrait 1" loading="lazy" />
+              </figure>
+              <figure class="client-card carousel__slide">
+                <img src="images/happy-clirnt2.png" alt="Happy client portrait 2" loading="lazy" />
+              </figure>
+              <figure class="client-card carousel__slide">
+                <img src="images/happy%20client3.png" alt="Happy client portrait 3" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+          <div class="carousel__controls">
+            <button type="button" class="carousel__btn" data-carousel-prev aria-label="Previous">‹</button>
+            <div class="carousel__dots" data-carousel-dots></div>
+            <button type="button" class="carousel__btn" data-carousel-next aria-label="Next">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM LIVE -->
+    <section class="section instagram" id="instagram">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="ig.eyebrow">Live auf Instagram</p>
+          <h2 class="section-title" data-i18n="ig.title">Neueste Posts</h2>
+          <p class="section-lead" data-i18n="ig.lead">Folge @anifememeti für Looks, Behind-the-Scenes und Updates aus Zürich.</p>
+        </header>
+        <div class="ig-window reveal">
+          <div class="ig-window__chrome">
+            <div class="ig-window__notch" aria-hidden="true"></div>
+            <div class="ig-window__status">
+              <span>9:41</span>
+              <span class="ig-window__signal" aria-hidden="true"></span>
+            </div>
+            <div class="ig-window__profile">
+              <span class="ig-window__avatar" aria-hidden="true">AM</span>
+              <div>
+                <strong>anifememeti</strong>
+                <span data-i18n="ig.handle">Make-up Artist · Zürich</span>
+              </div>
+              <a class="btn btn--sm btn--gold" href="https://www.instagram.com/anifememeti/" target="_blank" rel="noopener noreferrer" data-i18n="ig.follow">Folgen</a>
+            </div>
+          </div>
+          <div class="ig-window__feed">
+            <iframe
+              title="Instagram @anifememeti"
+              src="https://www.instagram.com/anifememeti/embed"
+              loading="lazy"
+              allowtransparency="true"
+              frameborder="0"
+              scrolling="yes"
+            ></iframe>
+          </div>
+          <div class="ig-window__fallback">
+            <p data-i18n="ig.fallback">Instagram Feed laden…</p>
+            <a class="btn btn--gold btn--sm" href="https://www.instagram.com/anifememeti/" target="_blank" rel="noopener noreferrer" data-i18n="ig.open">Auf Instagram öffnen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIVEAWAY WHEEL -->
+    <section class="section giveaway" id="giveaway">
+      <div class="container giveaway__layout">
+        <div class="giveaway__copy reveal">
+          <p class="eyebrow" data-i18n="wheel.eyebrow">Gewinnspiel</p>
+          <h2 class="section-title" data-i18n="wheel.title">Dreh das Glücksrad</h2>
+          <p class="section-lead" data-i18n="wheel.lead">Sichere dir Rabatte, Gratis-Beratung oder ein Soft Glam Upgrade. Ein Spin pro Besuch.</p>
+          <p class="wheel-result" id="wheelResult" aria-live="polite"></p>
+        </div>
+        <div class="wheel-wrap reveal">
+          <div class="wheel-pointer" aria-hidden="true"></div>
+          <canvas id="prizeWheel" width="420" height="420" aria-label="Prize wheel"></canvas>
+          <button type="button" class="btn btn--gold btn--lg" id="spinBtn" data-i18n="wheel.spin">Jetzt drehen</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP + RESERVE -->
+    <section class="section location" id="location">
+      <div class="container location__grid">
+        <div class="location__copy reveal">
+          <p class="eyebrow" data-i18n="map.eyebrow">Standort</p>
+          <h2 class="section-title" data-i18n="map.title">Zürich, Schweiz</h2>
+          <p class="body" data-i18n="map.lead">Termine nach Vereinbarung im Studio oder on location. Schreib mir für Soft Glam, Events oder Shootings.</p>
+          <ul class="location__meta">
+            <li>
+              <strong data-i18n="map.city">Stadt</strong>
+              <span>Zürich, CH</span>
+            </li>
+            <li>
+              <strong data-i18n="map.ig">Instagram</strong>
+              <a href="https://www.instagram.com/anifememeti/" target="_blank" rel="noopener noreferrer">@anifememeti</a>
+            </li>
+          </ul>
+          <button type="button" class="btn btn--gold btn--lg open-reserve" data-i18n="map.cta">Termin reservieren</button>
+        </div>
+        <div class="map-frame reveal">
+          <iframe
+            title="Zürich map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86401.18908698656!2d8.4660!3d47.3769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900b9749bea219%3A0xe66e8df1e71fdc03!2sZ%C3%BCrich!5e0!3m2!1sde!2sch!4v1700000000000!5m2!1sde!2sch"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__row">
+      <a class="brand brand--footer" href="#top">
+        <img src="images/logo-dark.png" alt="Anife Memeti" class="footer__logo" />
+      </a>
+      <p data-i18n="footer.copy">© 2026 Anife Memeti. Alle Rechte vorbehalten.</p>
+      <a class="ig-btn" href="https://www.instagram.com/anifememeti/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- RESERVE MODAL -->
+  <div class="modal" id="reserveModal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="reserveTitle">
+      <button type="button" class="modal__close" data-close-modal aria-label="Close">×</button>
+      <h2 id="reserveTitle" data-i18n="form.title">Termin reservieren</h2>
+      <p class="modal__lead" data-i18n="form.lead">Erzähl mir kurz, was du brauchst — ich melde mich bei dir.</p>
+      <form id="reserveForm" novalidate>
+        <label>
+          <span data-i18n="form.name">Name</span>
+          <input type="text" name="name" required autocomplete="name" />
+        </label>
+        <label>
+          <span data-i18n="form.email">E-Mail</span>
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label>
+          <span data-i18n="form.phone">Telefon</span>
+          <input type="tel" name="phone" autocomplete="tel" />
+        </label>
+        <label>
+          <span data-i18n="form.service">Service</span>
+          <select name="service" required>
+            <option value="" data-i18n="form.servicePlaceholder">Bitte wählen</option>
+            <option value="soft-glam" data-i18n="form.s1">Soft Glam</option>
+            <option value="event" data-i18n="form.s2">Event / Party</option>
+            <option value="bridal" data-i18n="form.s3">Braut / Special</option>
+            <option value="lesson" data-i18n="form.s4">Make-up Lesson</option>
+          </select>
+        </label>
+        <label>
+          <span data-i18n="form.date">Wunschdatum</span>
+          <input type="date" name="date" required />
+        </label>
+        <label>
+          <span data-i18n="form.note">Nachricht</span>
+          <textarea name="note" rows="3" data-i18n-placeholder="form.notePh" placeholder="Anlass, Ort, Uhrzeit…"></textarea>
+        </label>
+        <button type="submit" class="btn btn--gold btn--lg btn--block" data-i18n="form.submit">Anfrage senden</button>
+        <p class="form-ok" id="formOk" hidden data-i18n="form.success">Danke! Deine Anfrage ist angekommen.</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
